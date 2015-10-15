@@ -178,6 +178,7 @@ config ARCH_MSM8960
 	select ARM_USE_USER_ACCESSIBLE_TIMERS
 	select MSM_USE_USER_ACCESSIBLE_TIMERS
 	select MSM_CPU_PWRCTL
+	select HAS_MACH_MEMUTILS
 	select MSM_LPM_TEST
 
 config ARCH_MSM8930
@@ -216,6 +217,7 @@ config ARCH_MSM8930
 	select ARM_USE_USER_ACCESSIBLE_TIMERS
 	select MSM_USE_USER_ACCESSIBLE_TIMERS
 	select MSM_CPU_PWRCTL
+	select HAS_MACH_MEMUTILS
 
 config ARCH_APQ8064
 	bool "APQ8064"
@@ -250,6 +252,7 @@ config ARCH_APQ8064
 	select ARM_USE_USER_ACCESSIBLE_TIMERS
 	select MSM_USE_USER_ACCESSIBLE_TIMERS
 	select MSM_CPU_PWRCTL
+	select HAS_MACH_MEMUTILS
 
 config ARCH_MSM8974
 	bool "MSM8974"
@@ -4922,4 +4925,11 @@ config SEC_SMART_MGR_RUNQUEUE_AVG
 	bool "Samsung added for read current run queue"
 	help
 	  Support for Smart MGR function.
+	  	  
+config HAS_MACH_MEMUTILS
+	default n
+	bool "Motorola MSM memcpy enhancements"
+	help
+	Faster memcpy performance for Krait
+
 endif
